@@ -53,7 +53,6 @@ Just make sure requirements.txt exists in your project.
    ```bash
    pip install -r requirements.txt
    If requirements.txt does not exist, manually install dependencies using:
-   ```bash
    pip install discord.py
 
 
