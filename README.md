@@ -31,7 +31,7 @@ This Python script runs a Discord bot that performs various automated tasks on y
 
 
 #### **Using Termux**:
-1. Open Termux on your Android device, or download from this [linl]().
+1. Open Termux on your Android device, or download from this [link](https://f-droid.org/en/packages/com.termux/).
 2. Install Git if you haven't already by running:
    ```bash
    pkg install git
@@ -56,8 +56,6 @@ Just make sure requirements.txt exists in your project.
 2. If requirements.txt does not exist, manually install dependencies using:
    ```bash
    pip install discord.py
-
-
 
 ### Step 3: Add Your Discord Bot Token to SourceCode.py
 To use the Discord bot, you need to provide your bot token in the script.
