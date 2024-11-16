@@ -182,18 +182,18 @@ async def track_slash(interaction: discord.Interaction, username: str, mode: str
     valid_modes = ["Discord", "Activity"]  # Add more modes as needed
 
     if mode not in valid_modes:
-        await interaction.response.send_message(f"Invalid mode. Choose from: {', '.join(valid_modes)}.", ephemeral=Tru>
+        await interaction.response.send_message(f"Invalid mode. Choose from: {', '.join(valid_modes)}.", ephemeral=True)
         return
 
     member = discord.utils.get(interaction.guild.members, name=username)
 
     if member is None:
-        await interaction.response.send_message(f"Could not find a user with the username `{username}`.", ephemeral=Tr>
+        await interaction.response.send_message(f"Could not find a user with the username `{username}`.", ephemeral=True)
         return
 
     
     tracking[member.id] = {"user": member, "author": interaction.user, "mode": mode}
-    await interaction.response.send_message(f"Tracking `{username}` on {mode}. You will be notified in DMs about their>
+    await interaction.response.send_message(f"Tracking `{username}` on {mode}. You will be notified in DMs about their status.")
     track_status.start(member)
 
 
@@ -202,7 +202,7 @@ async def stop_tracking_slash(interaction: discord.Interaction, username: str):
     member = discord.utils.get(interaction.guild.members, name=username)
 
     if member is None and username not in tracking:
-        await interaction.response.send_message(f"Could not find an active tracking session for `{username}`.", epheme>
+        await interaction.response.send_message(f"Could not find an active tracking session for `{username}`.", ephemeremal=True)
         return
 
     if member is not None and member.id in tracking:
