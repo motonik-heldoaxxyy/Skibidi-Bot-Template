@@ -503,8 +503,8 @@ async def trivia(ctx):
             await ctx.send("Correct! 🎉")
         else:
             await ctx.send(f"Wrong! The correct answer was: {question['answer']}")
-        except asyncio.TimeoutError:
-            await ctx.send("Time's up! ⏰")
+    except asyncio.TimeoutError:
+        await ctx.send("Time's up! ⏰")
 
 @bot.command()
 async def poll(ctx, *, question: str):
