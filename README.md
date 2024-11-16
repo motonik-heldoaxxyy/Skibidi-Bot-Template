@@ -52,8 +52,8 @@ Just make sure requirements.txt exists in your project.
 1. Install the required dependencies by running:
    ```bash
    pip install -r requirements.txt
-   
-   If requirements.txt does not exist, manually install dependencies using:
+
+2. If requirements.txt does not exist, manually install dependencies using:
    ```bash
    pip install discord.py
 
