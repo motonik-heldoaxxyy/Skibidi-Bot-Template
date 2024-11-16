@@ -24,9 +24,9 @@ This Python script runs a Discord bot that performs various automated tasks on y
 1. Go to [Replit](https://replit.com/).
 2. Create a new Python project.
 3. In the project dashboard, click the "Git" icon or use the "Import from GitHub" option.
-4. Paste the URL of your GitHub repository:
+4. Paste the URL of this GitHub repository:
    ```bash
-   https://github.com/motonik-heldoaxxyy/Skibidi-Bot-source-code-I-guess
+   https://github.com/motonik-heldoaxxyy/Skibidi-Bot-Template
 5. Replit will clone the repository into your workspace.
 
 
@@ -37,10 +37,10 @@ This Python script runs a Discord bot that performs various automated tasks on y
    pkg install git
 3. Clone the repository by running:
    ```bash
-   git clone https://github.com/motonik-heldoaxxyy/Skibidi-Bot-source-code-I-guess
+   git clone https://github.com/motonik-heldoaxxyy/Skibidi-Bot-Template
 4. Navigate to the project directory:
    ```bash
-   cd Skibidi-Bot-source-code-I-guess
+   cd Skibidi-Bot-Template
 
 ### Step 2: Install Dependencies
 #### **In Replit**:
@@ -123,8 +123,6 @@ If you'd like to contribute to this project, follow these steps:
 4. Commit your changes (git commit -m 'Add feature').
 5. Push to your branch (git push origin feature-branch).
 6. Open a pull request.
-
-
 
 # License
 
