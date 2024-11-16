@@ -5,7 +5,6 @@ import json
 import os
 import random
 import math
-from keep_alive import keep_alive
 from discord import app_commands
 import requests
 import asyncio
@@ -18,10 +17,10 @@ load_dotenv()
 
 max_content_length = 200
 
-TOKEN = os.getenv('TOKEN')
+TOKEN = "" # Put ur token here nigger
 intents = discord.Intents.default()
-intents.presences = True  # Enable tracking presences
-intents.members = True  # Enable member access
+intents.presences = True  
+intents.members = True  
 intents.message_content = True
 bot = commands.Bot(command_prefix='Skibidi ', intents=intents)
 data_file = 'economy.json'
@@ -31,6 +30,7 @@ tracking = {}
 user_id = 1294151366297780248
 user_id2 = 1250450550688845926
 CHANNEL_ID = 1256477082133987329
+
 def get_data():
     if os.path.exists(data_file):
         with open(data_file, 'r') as f:
@@ -525,7 +525,8 @@ async def serverinfo(ctx):
     embed.add_field(name="Server ID", value=guild.id, inline=False)
     embed.add_field(name="Owner", value=guild.owner.mention, inline=False)
     embed.add_field(name="Member Count", value=guild.member_count, inline=False)
-    embed.add_field(name="Creation Date", value=guild.created_at.strftime("%Y-%m-%d"), inline=False)      embed.add_field(name="Region", value=guild.region, inline=False)
+    embed.add_field(name="Creation Date", value=guild.created_at.strftime("%Y-%m-%d"), inline=False)
+    embed.add_field(name="Region", value=guild.region, inline=False)
 
     await ctx.send(embed=embed)
     
