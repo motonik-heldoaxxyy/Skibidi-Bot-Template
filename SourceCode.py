@@ -494,7 +494,7 @@ trivia_questions = [
 async def trivia(ctx):
     question = random.choice(trivia_questions)
     await ctx.send(question["question"])
-                                                                                                          def check(msg):
+    def check(msg):
         return msg.author == ctx.author and msg.channel == ctx.channel
 
     try:
@@ -502,13 +502,15 @@ async def trivia(ctx):
         if msg.content.lower() == question["answer"].lower():
             await ctx.send("Correct! 🎉")
         else:
-            await ctx.send(f"Wrong! The correct answer was: {question['answer']}")                        except asyncio.TimeoutError:
-        await ctx.send("Time's up! ⏰")
+            await ctx.send(f"Wrong! The correct answer was: {question['answer']}")
+        except asyncio.TimeoutError:
+            await ctx.send("Time's up! ⏰")
 
 @bot.command()
 async def poll(ctx, *, question: str):
     poll_message = await ctx.send(f"**Poll:** {question}")
-    await poll_message.add_reaction("👍")                                                                 await poll_message.add_reaction("👎")
+    await poll_message.add_reaction("👍")             
+    await poll_message.add_reaction("👎")
 
 @bot.command()
 async def remindme(ctx, time: int, *, message: str):
