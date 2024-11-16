@@ -115,7 +115,7 @@ async def on_resumed():
 
     print('Bot is ready')
     
-    @bot.command()
+@bot.command()
 async def track(ctx, username: str, mode: str = "Discord"):
     
     valid_modes = ["Discord", "Activity"]                                             
@@ -134,7 +134,7 @@ async def track(ctx, username: str, mode: str = "Discord"):
     await ctx.send(f"Tracking `{username}` on {mode}. You will be notified in DMs about their status.")
     track_status.start(member)
     
-    @tasks.loop(seconds=120)  
+@tasks.loop(seconds=120)  
 async def track_status(member):
     target = tracking[member.id]["user"]
     author = tracking[member.id]["author"]
