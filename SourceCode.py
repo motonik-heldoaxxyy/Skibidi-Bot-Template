@@ -176,7 +176,7 @@ async def stop_tracking(ctx, username: str):
     
     track_status.stop()
     
-    @bot.tree.command(description="Track a user on Discord.")
+@bot.tree.command(description="Track a user on Discord.")
 async def track_slash(interaction: discord.Interaction, username: str, mode: str = "Discord"):
     
     valid_modes = ["Discord", "Activity"]  # Add more modes as needed
