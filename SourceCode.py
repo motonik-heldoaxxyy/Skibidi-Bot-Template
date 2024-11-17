@@ -23,9 +23,7 @@ intents.presences = True
 intents.members = True  
 intents.message_content = True
 bot = commands.Bot(command_prefix='Skibidi ', intents=intents)
-data_file = 'economy.json'
-currency_symbol = 'Robux'
-prefixx = 'Skibidi'
+prefixx = 'Skibidi' # ur prefix here
 tracking = {}
 user_id = 1294151366297780248
 user_id2 = 1250450550688845926
